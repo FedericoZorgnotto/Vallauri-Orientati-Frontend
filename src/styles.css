@@ -21,7 +21,9 @@ html, body {
     --header-font-hover-color: #555555;
     --header-current-page-color: #4CAF50;
     --header-current-page-font-weight: bold;
-    --header-transition: color 0.3s ease, font-weight 0.3s ease;
+    --header-transition: color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    --header-background-scrolled-color: #000000;
+    --header-font-scrolled-color: #ffffff;
     
 
     /* LINKS */

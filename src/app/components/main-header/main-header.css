@@ -6,6 +6,21 @@
     background-color: var(--header-background-color);
     color: var(--header-font-color);
     padding: 5px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transform: translateY(0);
+    transition: var(--header-transition);
+}
+
+#header.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-background-scrolled-color);
+    color: var(--header-font-scrolled-color);
+}
+
+#header.hidden {
+    transform: translateY(-100%);
 }
 
 #nav-bar {
@@ -28,6 +43,10 @@
 #nav-bar a:hover {
     text-decoration: underline;
     color: var(--header-font-hover-color);
+}
+
+#header.scrolled #nav-bar a {
+    color: var(--header-font-scrolled-color);
 }
 
 .current-page {
