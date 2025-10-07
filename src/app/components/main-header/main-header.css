@@ -1,0 +1,44 @@
+#header{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+    padding: 5px 20px;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+#nav-bar a {
+    text-decoration: none !important;
+    color: var(--header-font-color);
+    font-weight: 500;
+    font-size: var(--header-font-size);
+    transition: color 0.3s ease;
+    cursor: pointer;
+    transition: var(--header-transition);
+}
+
+#nav-bar a:hover {
+    text-decoration: underline;
+    color: var(--header-font-hover-color);
+}
+
+.current-page {
+    color: var(--header-current-page-color) !important; 
+    font-weight: var(--header-current-page-font-weight) !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+
+.current-page:hover {
+    text-decoration: none !important;
+    color: var(--header-current-page-color) !important; 
+    cursor: default !important;
+}

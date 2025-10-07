@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #ff9800;
+    --font-color: #333333;
+    --background-color: #f5f5f5;
+
+    /* HEADER */
+    --header-background-color: #ffffff;
+    --header-font-color: #000000;
+    --header-font-size: 18px;
+    --header-font-hover-color: #555555;
+    --header-current-page-color: #4CAF50;
+    --header-current-page-font-weight: bold;
+    --header-transition: color 0.3s ease, font-weight 0.3s ease;
+    
+
+    /* LINKS */
+    --link-color: #3a8fff;
+    --link-hover-color: #8bbdff;
+    --link-visited-color: #bb73ff;
+    --link-active-color: #d93025;
+    --link-decoration: none;
+    --link-hover-decoration: underline;
+    --link-visited-decoration: none;
+    --link-active-decoration: underline;
+    --link-transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: var(--link-decoration);
+    transition: var(--link-transition);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: var(--link-hover-decoration);
+}
+
+a:visited {
+    color: var(--link-visited-color);
+    text-decoration: var(--link-visited-decoration);
+}
+
+a:active {
+    color: var(--link-active-color);
+    text-decoration: var(--link-active-decoration);
+}

@@ -1,0 +1,15 @@
+<div id="header">
+  <h1>Welcome to Orientati</h1>
+  <nav id="nav-bar">
+    @for (menu_item of Routes; track $index) {
+    <a
+      class="menu-item"
+      [routerLink]="menu_item.path"
+      (click)="CurrentPage !== menu_item.path && navigateTo(menu_item.path)"
+      [ngClass]="{ 'current-page': CurrentPage === menu_item.path }"
+    >
+      {{ menu_item.label }}
+    </a>
+    }
+  </nav>
+</div>
