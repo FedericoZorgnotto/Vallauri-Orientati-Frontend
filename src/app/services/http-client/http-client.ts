@@ -120,7 +120,7 @@ async function isTokenExpired(token: string) : Promise<boolean> {
 
   if (response.ok) {
     const data = await response.json();
-    return data.expired ? true : false;
+    return !!data.expired;  //data.expired ? true : false;
   }
 
   return true;
