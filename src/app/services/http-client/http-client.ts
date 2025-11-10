@@ -18,7 +18,17 @@ export class HttpClientService {
   constructor(private http: HttpClient) {
   }
 
-  async get<T>(endpoint: string, token_required: boolean = true, options: any = {}) : Promise<T> {
+  /*async get<T>(endpoint: string, token_required: boolean = true, options: any = {}) : Promise<T> {
+    if(token_required) {
+      const valid = await checkToken();
+      if(!valid) {
+        window.location.href = LOGIN_PAGE;
+        return Promise.reject('Not authenticated');
+      }
+    }
+    return firstValueFrom(this.http.get<T>(`${BASE_URL}${endpoint}`, options));
+  }*/
+  async get<T>(endpoint: string, token_required: boolean = true, options: object = {}) : Promise<T> {
     if(token_required) {
       const valid = await checkToken();
       if(!valid) {
@@ -47,7 +57,7 @@ async function checkToken() {
       localStorage.removeItem(REFRESH_TOKEN_LABEL);
       return false;
     }
-    
+
     // If we get here, we have a valid token
     localStorage.setItem(ACCESS_TOKEN_LABEL, token);
   }
